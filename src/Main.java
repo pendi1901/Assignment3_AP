@@ -7,31 +7,74 @@ import java.util.ArrayList;
 public class Main {
 
     public class Floor{
-        int position;
-        int points;
+       public int position;
+       public int points;
+
+       public Floor(int position , int points){
+           this.points=points;
+           this.position = position;
+       }
+
+       public void fall(int decrement){
+           position-=decrement;
+       }
+       public void climb(int increment){
+           position+=increment;
+       }
+       public void add(int adder){
+           points+=adder;
+       }
+       public void sub(int dec){
+           points-=dec;
+       }
+       public String toString(){
+           return ("Total points: " + points +"\n" + "Player position Floor: " + position);
+       }
     }
     public class Empty extends Floor{
 
+        public Empty(int position, int points) {
+            super(position, points);
+        }
+        public void setposition(){}
     }
     public class SnakeFloor extends Floor{
 
+        public SnakeFloor(int position, int points) {
+            super(position, points);
+        }
     }
     public class Normal extends SnakeFloor{
 
 
+        public Normal(int position, int points) {
+            super(position, points);
+        }
     }
     public class KingCobra extends SnakeFloor{
 
+        public KingCobra(int position, int points) {
+            super(position, points);
+        }
     }
     public class Ladder extends Floor{
 
 
+        public Ladder(int position, int points) {
+            super(position, points);
+        }
     }
     public class Norm extends Ladder{
 
+        public Norm(int position, int points) {
+            super(position, points);
+        }
     }
     public class Elevator extends Ladder{
 
+        public Elevator(int position, int points) {
+            super(position, points);
+        }
     }
     public static class Dice {
         Random rand = new Random();
