@@ -256,6 +256,8 @@ public class SnakesandLadders {
                 points = e2.getPoints();
                 position = e2.getPosition();
                 System.out.println("Total Points: " + e2.getPoints());
+                position+=4;
+                points+=2;
             }
             else if(position== 5){
                 System.out.println(name + " has reached a Snake Floor");
@@ -276,6 +278,8 @@ public class SnakesandLadders {
                 points = e2.getPoints();
                 position = e2.getPosition();
                 System.out.println("Total Points: " + e2.getPoints());
+                position-=4;
+                points-=2;
             }
             else if(position==11){
                 System.out.println(name + " has reached a King Cobra Floor");
@@ -294,6 +298,8 @@ public class SnakesandLadders {
                 points = e2.getPoints();
                 position = e2.getPosition();
                 System.out.println("Total Points: " + e2.getPoints());
+                position-=8;
+                points-=4;
 
             }
             else if(position ==12){
