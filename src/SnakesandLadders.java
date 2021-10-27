@@ -177,10 +177,12 @@ public class SnakesandLadders {
         System.out.println("Enter the player name and hit enter");
         String name = br.readLine();
         System.out.println("The game setup is ready");
-        System.out.println("Hit enter to roll the dice");
-        String b = br.readLine();
+
+
 
         while(true){
+            System.out.println("Hit enter to roll the dice");
+            String b = br.readLine();
             d1.roll();
             if(d1.faceValue == 1){
                 break;
@@ -258,6 +260,7 @@ public class SnakesandLadders {
                 System.out.println("Total Points: " + e2.getPoints());
                 position+=4;
                 points+=2;
+                position =12;
             }
             else if(position== 5){
                 System.out.println(name + " has reached a Snake Floor");
@@ -297,7 +300,9 @@ public class SnakesandLadders {
                 e2.setPosition(e2.getPosition());
                 points = e2.getPoints();
                 position = e2.getPosition();
-                System.out.println("Total Points: " + e2.getPoints());
+                kc1.add(1);
+                points = kc1.getPoints();
+                System.out.println("Total Points: " + kc1.getPoints() );
                 position-=8;
                 points-=4;
 
